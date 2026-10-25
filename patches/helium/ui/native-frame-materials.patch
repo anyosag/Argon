@@ -43,7 +43,7 @@
 --- a/chrome/browser/helium_flag_entries.h
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -75,5 +75,9 @@
-      "prevent access to networks that require a proxy. Helium flag.",
+      "prevent access to networks that require a proxy. Argon flag.",
       kOsAll, SINGLE_VALUE_TYPE(switches::kNoProxyServer)},
      // ui
 +    {helium::kHeliumNativeFrameMaterialsCommandLine, "Native frame materials",

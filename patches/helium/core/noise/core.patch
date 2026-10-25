@@ -48,7 +48,7 @@
 --- a/chrome/browser/helium_flag_entries.h
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -27,6 +27,12 @@
-      "Enables autoscroll on middle click. Helium flag, Chromium feature.",
+      "Enables autoscroll on middle click. Argon flag, Chromium feature.",
       kOsDesktop,
       FEATURE_VALUE_TYPE(blink::features::kHeliumMiddleClickAutoscroll)},
 +    {helium::kHeliumNoiseCommandLine, "Argon Noise",

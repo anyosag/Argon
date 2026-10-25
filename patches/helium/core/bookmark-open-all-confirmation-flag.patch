@@ -2,7 +2,7 @@
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -12,6 +12,10 @@
       "Configures the frame rate the browser is throttled to when Energy Saver "
-      "is enabled. Helium flag.",
+      "is enabled. Argon flag.",
       kOsDesktop, MULTI_VALUE_TYPE(helium::kEnergySaverFrameRateChoices)},
 +    {"bookmark-open-all-confirmation", "Bookmark open-all confirmation",
 +     "Controls whether Argon asks for confirmation before opening 15 or more "

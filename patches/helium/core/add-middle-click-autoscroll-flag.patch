@@ -14,7 +14,7 @@
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -23,6 +23,10 @@
       "Overrides the default URL for fetching updates. Should be used only for "
-      "testing. Helium flag.",
+      "testing. Argon flag.",
       kOsDesktop, STRING_VALUE_TYPE(helium::kUpdateServerUrlCommandLine, "")},
 +    {helium::kMiddleClickAutoscrollCommandLine, "Middle Click Autoscroll",
 +     "Enables autoscroll on middle click. Argon flag, Chromium feature.",

@@ -13,7 +13,7 @@
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -43,6 +43,11 @@
       "Adds insignificant jitter to audio data to deceive AudioContext-based "
-      "fingerprinting. Helium flag.",
+      "fingerprinting. Argon flag.",
       kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseAudio)},
 +    {helium::kHeliumNoiseCpuCoresCommandLine,
 +     "[Argon Noise] Randomize number of CPU cores",
