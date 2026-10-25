@@ -189,11 +189,11 @@
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -19,6 +19,10 @@
      {helium::kChannelCommandLine, "Update channel",
-      "Selects which update channel to use for update checking. Helium flag.",
+      "Selects which update channel to use for update checking. Argon flag.",
       kOsAll, MULTI_VALUE_TYPE(helium::kChannelChoices)},
 +    {helium::kUpdateServerUrlCommandLine, "Update server URL",
 +     "Overrides the default URL for fetching updates. Should be used only for "
-+     "testing. Helium flag.",
++     "testing. Argon flag.",
 +     kOsDesktop, STRING_VALUE_TYPE(helium::kUpdateServerUrlCommandLine, "")},
      // core/network
      // ui

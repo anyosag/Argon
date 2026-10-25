@@ -12,12 +12,12 @@
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -38,6 +38,11 @@
       "Adds insignificant noise to canvas pixels during readback to deceive "
-      "canvas-based fingerprinting. Helium flag.",
+      "canvas-based fingerprinting. Argon flag.",
       kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseCanvas)},
 +    {helium::kHeliumNoiseAudioCommandLine,
-+     "[Helium Noise] Jitter audio context data",
++     "[Argon Noise] Jitter audio context data",
 +     "Adds insignificant jitter to audio data to deceive AudioContext-based "
-+     "fingerprinting. Helium flag.",
++     "fingerprinting. Argon flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseAudio)},
      // core/network
      // ui

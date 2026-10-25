@@ -26,12 +26,16 @@ TRANSLATIONS_DIR = I18N_DIR / 'translations'
 
 
 def get_id(name, context, text, meaning):
-    """Compute the fingerprint ID for a GRD message element."""
+    """
+    Compute the fingerprint ID for a GRD message element, as it is after
+    name_substitution.py has renamed the product in the source string.
+    """
     message = xml.fromstring(f'<message>{text}</message>')
     message.set('name', name)
     message.set('desc', context)
     if meaning:
         message.set('meaning', meaning)
+    namesub.replace_grit_message(message)
     return namesub.compute_fp(message)
 
 
@@ -154,7 +158,8 @@ def merge_into_xtb(xtb_path, source_entries, trans_by_key):
         if msg_id in seen_ids:
             continue
         seen_ids.add(msg_id)
-        entries.append((msg_id, to_xtb_message(trans['message'])))
+        message, _ = namesub.replace_text(to_xtb_message(trans['message']), rebrand=True)
+        entries.append((msg_id, message))
 
     if entries:
         insert_into_xtb(xtb_path, entries)

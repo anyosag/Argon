@@ -3,7 +3,7 @@
 # Copyright 2025 The Helium Authors
 # You can use, redistribute, and/or modify this source code under
 # the terms of the GPL-3.0 license that can be found in the LICENSE file.
-"""Script to replace instances of Chrome/Chromium with Helium"""
+"""Script to replace instances of Chrome/Chromium and Helium with Argon"""
 
 from concurrent.futures import ProcessPoolExecutor
 from tarfile import TarInfo
@@ -21,20 +21,27 @@ IGNORE_DIRS = ['.pc', 'chromeos', 'remoting', 'ash', 'testdata']
 def replacement_sanity():
     """Sanity check to ensure replacement regexes are working as intended"""
     before_after = [
-        ('chrome://about', 'helium://about'),
+        ('chrome://about', 'argon://about'),
+        ('helium://settings', 'argon://settings'),
         ('Chrome Root Program', 'Chrome Root Program'),
-        (' Chrome  ', ' Helium  '),
+        (' Chrome  ', ' Argon  '),
         ('Chrome Web Store', 'Chrome Web Store'),
         ('Chromium Web Store', 'Chromium Web Store'),
         ('Chrome Remote Desktop', 'Chrome Remote Desktop'),
-        ('Google Chrome', 'Helium'),
-        ('Chrome Google Chrome Chrome Chromium', 'Helium Helium Helium Helium'),
-        ('Chrome', 'Helium'),
-        ('Chromium', 'Helium'),
+        ('Google Chrome', 'Argon'),
+        ('Chrome Google Chrome Chrome Chromium', 'Argon Argon Argon Argon'),
+        ('Chrome', 'Argon'),
+        ('Chromium', 'Argon'),
+        ('Helium', 'Argon'),
+        ("Helium's memory", "Argon's memory"),
+        ('Helium will connect to Helium services', 'Argon will connect to Helium services'),
+        ('downloads from Helium servers', 'downloads from Helium servers'),
+        ('Helium Partner', 'Helium Partner'),
+        ('will support the development of Helium.', 'will support the development of Helium.'),
     ]
 
     for source, expected in before_after:
-        modified, match = util.replace_text(source)
+        modified, match = util.replace_text(source, rebrand=True)
         assert match, f"sanity: {expected} should have a match"
         assert modified == expected, f"sanity: {modified} != {expected}"
 

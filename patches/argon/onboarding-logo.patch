@@ -1,0 +1,19 @@
+--- a/components/helium_onboarding/src/pages/Finish.svelte
++++ b/components/helium_onboarding/src/pages/Finish.svelte
+@@ -1,7 +1,6 @@
+ <script lang="ts">
+     import {
+         Button,
+-        HeliumLogo,
+         IconArrowLeft,
+         IconCheck,
+     } from "@imput/helium-prism";
+@@ -26,7 +25,7 @@
+         <div id="finish-top">
+             <div id="finish-logo-text">
+                 <div id="finish-logo">
+-                    <HeliumLogo height="64px" />
++                    <svg width="64" height="64" viewBox="37 37 182 182" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M74.500 128a53.500 53.500 0 1 0 107.000 0a53.500 53.500 0 1 0 -107.000 0ZM81.500 128a46.500 46.500 0 1 0 93.000 0a46.500 46.500 0 1 0 -93.000 0ZM44.500 128a83.500 83.500 0 1 0 167.000 0a83.500 83.500 0 1 0 -167.000 0ZM51.500 128a76.500 76.500 0 1 0 153.000 0a76.500 76.500 0 1 0 -153.000 0Z" fill="currentColor"/><circle cx="128.00" cy="78.00" r="11.0" fill="currentColor"/><circle cx="128.00" cy="178.00" r="11.0" fill="currentColor"/><circle cx="128.00" cy="48.00" r="11.0" fill="currentColor"/><circle cx="71.43" cy="71.43" r="11.0" fill="currentColor"/><circle cx="48.00" cy="128.00" r="11.0" fill="currentColor"/><circle cx="71.43" cy="184.57" r="11.0" fill="currentColor"/><circle cx="128.00" cy="208.00" r="11.0" fill="currentColor"/><circle cx="184.57" cy="184.57" r="11.0" fill="currentColor"/><circle cx="208.00" cy="128.00" r="11.0" fill="currentColor"/><circle cx="184.57" cy="71.43" r="11.0" fill="currentColor"/><circle cx="128" cy="128" r="24.0" fill="currentColor"/></svg>
+                 </div>
+                 <div id="finish-text">
+                     <h1>{s.finish.title}</h1>

@@ -12,13 +12,13 @@
 --- a/chrome/browser/helium_flag_entries.h
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -49,6 +49,11 @@
-      "`navigator.hardwareConcurrency` in a reasonable range. Helium flag.",
+      "`navigator.hardwareConcurrency` in a reasonable range. Argon flag.",
       kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseCpuCores)},
      // core/network
 +    {helium::kDisableEchCommandLine, "Disable Encrypted Client Hello (ECH)",
 +     "Disables TLS Encrypted Client Hello, reducing traffic privacy when "
 +     "accessing websites that support ECH. Use this flag only if ECH is "
-+     "blocked on your network. Helium flag.",
++     "blocked on your network. Argon flag.",
 +     kOsAll, SINGLE_VALUE_TYPE(helium::kDisableEchCommandLine)},
      // ui
      // platform

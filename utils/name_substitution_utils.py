@@ -25,6 +25,21 @@ REPLACEMENT_REGEXES_STR = [
 REPLACEMENT_REGEXES = list(map(lambda line: (re.compile(line[0]), line[1]),
                                REPLACEMENT_REGEXES_STR))
 
+# Argon: a second pass that renames Helium itself. It only runs on the
+# source tree (name_substitution.py, i18n_apply.py); the i18n catalog
+# keeps Helium's strings, so its translations still match upstream.
+ARGON_REGEXES_STR = [
+    # Helium's services and partners keep their name: Argon connects to
+    # Helium's servers, and partner payments go to Helium's developers
+    (r'Helium( [Ss]ervices?| [Ss]ervers?| [Pp]artners?)', r'Helium_unreplace\1'),
+    (r'(development of) Helium(?!\w)', r'\1 Helium_unreplace'),
+    (r'(\b)helium://', r'\1argon://'),
+    (r'Helium(?!\w)', r'Argon'),
+    (r'Helium_unreplace', r'Helium'),
+]
+
+ARGON_REGEXES = list(map(lambda line: (re.compile(line[0]), line[1]), ARGON_REGEXES_STR))
+
 
 def add_grit_to_path(tree):
     """Inserts the grit/ folder into the module loading path."""
@@ -67,10 +82,14 @@ def compute_fp(message):
     return grit.extern.tclib.GenerateMessageId(text, meaning)
 
 
-def replace_text(text):
-    """Replaces instances of Chrom(e | ium) with Helium in strings"""
+def replace_text(text, rebrand=False):
+    """
+    Replaces instances of Chrom(e | ium) with Helium in strings,
+    then Helium with Argon if `rebrand` is set
+    """
     had_match = False
-    for regex, replacement in REPLACEMENT_REGEXES:
+    regexes = REPLACEMENT_REGEXES + (ARGON_REGEXES if rebrand else [])
+    for regex, replacement in regexes:
         if regex.search(text):
             had_match = True
             text = regex.sub(replacement, text)
@@ -89,18 +108,18 @@ def should_skip_tail(elem):
 
 def replace_grit_message(msg):
     """
-    Replaces instances of Chrom(e | ium) with Helium
-    in a <message> or <translation> element (and its children).
+    Replaces instances of Chrom(e | ium) with Helium, then Helium with
+    Argon, in a <message> or <translation> element (and its children).
     """
     had_any_match = False
 
     if msg.text:
-        text, match = replace_text(msg.text)
+        text, match = replace_text(msg.text, rebrand=True)
         msg.text = text
         had_any_match |= match
 
     if msg.tail and not should_skip_tail(msg):
-        tail, match = replace_text(msg.tail)
+        tail, match = replace_text(msg.tail, rebrand=True)
         msg.tail = tail
         had_any_match |= match
 

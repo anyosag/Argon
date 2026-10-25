@@ -13,7 +13,7 @@
 +++ b/chrome/browser/helium_flag_entries.h
 @@ -60,6 +60,16 @@
       "does not force QUIC on unsupported sites. Connections may fall back to "
-      "TCP when the server does not support QUIC v2. Helium flag.",
+      "TCP when the server does not support QUIC v2. Argon flag.",
       kOsAll, SINGLE_VALUE_TYPE_AND_VALUE(switches::kQuicVersion, "RFCv2")},
 +    {helium::kHeliumSplitClientHelloCommandLine,
 +     "Random TLS ClientHello splitting",
@@ -23,7 +23,7 @@
 +     "filtering, but it does not hide DNS queries or destination IP addresses "
 +     "and makes TLS traffic unusual and potentially recognizable. Some "
 +     "middleboxes and TLS endpoints mishandle this behavior and may become "
-+     "inaccessible. Helium flag.",
++     "inaccessible. Argon flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(net::features::kHeliumSplitClientHello)},
      // ui
      // platform
