@@ -1,98 +1,63 @@
 <div align="center">
     <img src="resources/branding/app_icon/raw.png"
-        title="Helium" alt="Helium logo" width="120" />
-    <h1>Helium</h1>
+        title="Argon" alt="Argon logo" width="120" />
+    <h1>Argon</h1>
     <p>
-        The browser built around privacy, consent, and comfort.
+        A personal fork of the Helium browser, renamed Argon.
     </p>
-    <a href="https://helium.computer/">
-        helium.computer
-    </a>
 </div>
 
-## Downloads
-> [!NOTE]
-> Helium is in beta, so unexpected issues may occur.
-> Please report them if they haven't already been reported.
+## About
+Argon is [Helium](https://github.com/imputnet/helium) with its own name,
+icon and app identity. The logo is argon's atom: 18 electrons in shells of
+2, 8 and 8, in Michigan maize and blue. Everything else, including the
+privacy and comfort features, comes from Helium.
 
-The easiest way to download Helium is [helium.computer](https://helium.computer/).
-It'll pick a compatible binary for your platform automatically.
+What differs from Helium:
 
-The same releases can also be downloaded from source on GitHub:
+- The name is Argon everywhere the browser shows it, and internal pages
+  open as `argon://` (`chrome://` still works).
+- Argon has its own identity on every platform: macOS bundle ID
+  `io.github.anyosag.argon`, its own profile folder, Keychain item, and
+  Windows install folder, registry keys and file associations. It installs
+  next to Helium without sharing data with it.
+- Argon still uses Helium services (extension downloads, !bangs, filter
+  list updates, spell check dictionaries). Settings keep calling them
+  "Helium services" because they run on Helium's servers. You can point
+  Argon at your own instance of them in settings.
 
-- [Latest macOS release](https://github.com/imputnet/helium-macos/releases/latest)
-- [Latest Linux release](https://github.com/imputnet/helium-linux/releases/latest)
-- [Latest Windows release](https://github.com/imputnet/helium-windows/releases/latest)
+## Repos
+- [Argon](https://github.com/anyosag/Argon) (this repo): the patches,
+  branding and tools shared by every platform.
+- [argon-macos](https://github.com/anyosag/argon-macos): macOS packaging.
+- [argon-windows](https://github.com/anyosag/argon-windows): Windows
+  packaging.
 
-Helium supports automatic updates on macOS and Windows.
+Both platform repos include this repo as their `helium-chromium` submodule.
 
-## Helium repos
-All Helium packaging, tooling, services, and components are open source
-and published on GitHub.
-
-### Platform packaging and tooling
-- [Helium for macOS](https://github.com/imputnet/helium-macos)
-- [Helium for Linux](https://github.com/imputnet/helium-linux)
-- [Helium for Windows](https://github.com/imputnet/helium-windows)
-
-### Web services
-[Helium services](https://github.com/imputnet/helium-services) are Helium's
-privacy-first cloud services that handle the extension proxy, !bangs, filter
-lists, browser updates, crash reports, and etc. The services are self-hostable
-and the repo includes exactly what we use and host, down to Ansible playbooks.
-
-### Components
-- [Helium uBlock Origin](https://github.com/imputnet/uBlock) is a
-Helium-specific fork of uBlock Origin that includes our filters, defaults, and
-CNAME uncloaking.
-
-- [Helium onboarding](https://github.com/imputnet/helium-onboarding) includes
-the browser setup experience seen at `helium://setup` on first launch.
-
-- [Helium non-free assets](https://github.com/imputnet/helium-nonfree-assets)
-repo handles non-free assets used in Helium, such as search engine icons and
-icons of other browsers.
-
-### Tooling
-- [Chromium tarballs](https://github.com/imputnet/chromium-tarballs) creates
-prepared Chromium source archives used by Helium builds.
-
-- [Helium Prism](https://github.com/imputnet/helium-prism) is a Svelte UI
-Component library used in onboarding and the landing page.
-
-### Legal documents
-[Helium Legal](https://github.com/imputnet/helium-legal) repo includes the
-source for [Terms of Use](https://helium.computer/terms) and
-[Privacy Policy](https://helium.computer/privacy) documents, along with their
-full change history.
-
-## Development
-macOS and Linux are our primary development platforms, so they're the
-recommended development environment for community contributions.
-
-[> See development docs in macOS repo](https://github.com/imputnet/helium-macos/blob/main/docs/building.md#development-build-and-environment)
-
-Linux packaging includes a similar development script, so the same guide
-can be applied there too.
-
-## Contributing
-Before contributing to Helium, please read the guidelines in
-[CONTRIBUTING.md](CONTRIBUTING.md).
+## Building
+See the platform repos. Their build docs come from Helium and apply
+unchanged: [macOS](https://github.com/anyosag/argon-macos/blob/main/docs/building.md),
+[Windows](https://github.com/anyosag/argon-windows#readme).
 
 ## Credits
 
+### Helium
+Argon is built on [Helium](https://github.com/imputnet/helium) and its
+packaging repos for [macOS](https://github.com/imputnet/helium-macos) and
+[Windows](https://github.com/imputnet/helium-windows). Helium's services,
+onboarding, uBlock Origin fork and Chromium source tarballs are used as they
+are published by Helium.
+
 ### The Chromium project
 [The Chromium Project](https://www.chromium.org/) is at the core of Helium,
-making it possible in the first place.
+and so of Argon.
 
 ### ungoogled-chromium
 Helium originally branched off
 [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium).
-Special thanks to everyone behind ungoogled-chromium, they made working with
-Chromium much easier.
 
 ### Other Chromium projects
-
 Helium includes some patches from other open source Chromium projects:
 
 - [Inox patchset](https://github.com/gcarq/inox-patchset)
@@ -104,9 +69,7 @@ Helium includes some patches from other open source Chromium projects:
 All patches are sorted by vendor in the [patches](patches/) directory of this repo.
 
 ## License
-All code, patches, modified portions of imported code or patches, and
-any other content that is unique to Helium and not imported from other
-repositories is licensed under GPL-3.0. See [LICENSE](LICENSE).
+Argon, like Helium, is licensed under GPL-3.0. See [LICENSE](LICENSE).
 
 Any content imported from other projects retains its original license (for
 example, any original unmodified code imported from ungoogled-chromium remains

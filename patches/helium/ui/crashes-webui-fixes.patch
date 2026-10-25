@@ -150,7 +150,7 @@
 +    additional: commentLines.join('\n'),
    };
 -  let href = 'https://bugs.chromium.org/p/chromium/issues/entry';
-+  let href = 'https://github.com/imputnet/helium/issues/new';
++  let href = 'https://github.com/anyosag/Argon/issues/new';
    for (const param in params) {
      href = appendParam(href, param, params[param]!);
    }

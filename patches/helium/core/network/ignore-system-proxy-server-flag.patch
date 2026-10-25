@@ -6,7 +6,7 @@
       kOsAll, FEATURE_VALUE_TYPE(net::features::kHeliumSplitClientHello)},
 +    {"no-proxy-server", "Ignore system proxy",
 +     "Ignores system proxy settings and always connects directly. This may "
-+     "prevent access to networks that require a proxy. Helium flag.",
++     "prevent access to networks that require a proxy. Argon flag.",
 +     kOsAll, SINGLE_VALUE_TYPE(switches::kNoProxyServer)},
      // ui
      // platform

@@ -18,7 +18,7 @@
 +    {helium::kDisableEchCommandLine, "Disable Encrypted Client Hello (ECH)",
 +     "Disables TLS Encrypted Client Hello, reducing traffic privacy when "
 +     "accessing websites that support ECH. Use this flag only if ECH is "
-+     "blocked on your network. Helium flag.",
++     "blocked on your network. Argon flag.",
 +     kOsAll, SINGLE_VALUE_TYPE(helium::kDisableEchCommandLine)},
      // ui
      // platform

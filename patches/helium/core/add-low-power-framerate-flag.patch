@@ -26,7 +26,7 @@
 +    {helium::kEnergySaverFrameRateCommandLine,
 +     "Maximum frame rate for Energy Saver",
 +     "Configures the frame rate the browser is throttled to when Energy Saver "
-+     "is enabled. Helium flag.",
++     "is enabled. Argon flag.",
 +     kOsDesktop, MULTI_VALUE_TYPE(helium::kEnergySaverFrameRateChoices)},
      // core/network
      // ui

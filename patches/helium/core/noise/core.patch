@@ -51,10 +51,10 @@
       "Enables autoscroll on middle click. Helium flag, Chromium feature.",
       kOsDesktop,
       FEATURE_VALUE_TYPE(blink::features::kHeliumMiddleClickAutoscroll)},
-+    {helium::kHeliumNoiseCommandLine, "Helium Noise",
-+     "Helium's anti-fingerprinting functionality. Adds insignificant noise to "
++    {helium::kHeliumNoiseCommandLine, "Argon Noise",
++     "Argon's anti-fingerprinting functionality. Adds insignificant noise to "
 +     "various features to deceive fingerprinting scripts. Enabled by default, "
-+     "must be enabled for other anti-fingerprinting features to work. Helium "
++     "must be enabled for other anti-fingerprinting features to work. Argon "
 +     "flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoise)},
      // core/network

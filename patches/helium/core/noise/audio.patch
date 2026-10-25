@@ -15,9 +15,9 @@
       "canvas-based fingerprinting. Helium flag.",
       kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseCanvas)},
 +    {helium::kHeliumNoiseAudioCommandLine,
-+     "[Helium Noise] Jitter audio context data",
++     "[Argon Noise] Jitter audio context data",
 +     "Adds insignificant jitter to audio data to deceive AudioContext-based "
-+     "fingerprinting. Helium flag.",
++     "fingerprinting. Argon flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseAudio)},
      // core/network
      // ui

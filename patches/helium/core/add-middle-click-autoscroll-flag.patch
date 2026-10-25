@@ -17,7 +17,7 @@
       "testing. Helium flag.",
       kOsDesktop, STRING_VALUE_TYPE(helium::kUpdateServerUrlCommandLine, "")},
 +    {helium::kMiddleClickAutoscrollCommandLine, "Middle Click Autoscroll",
-+     "Enables autoscroll on middle click. Helium flag, Chromium feature.",
++     "Enables autoscroll on middle click. Argon flag, Chromium feature.",
 +     kOsDesktop,
 +     FEATURE_VALUE_TYPE(blink::features::kHeliumMiddleClickAutoscroll)},
      // core/network

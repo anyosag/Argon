@@ -83,7 +83,7 @@
       "bookmarks at once. Helium flag.",
       kOsDesktop, FEATURE_VALUE_TYPE(features::kBookmarkOpenAllConfirmation)},
 +    {helium::kChannelCommandLine, "Update channel",
-+     "Selects which update channel to use for update checking. Helium flag.",
++     "Selects which update channel to use for update checking. Argon flag.",
 +     kOsAll, MULTI_VALUE_TYPE(helium::kChannelChoices)},
      // core/network
      // ui

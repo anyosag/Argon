@@ -23,7 +23,7 @@
 +     "filtering, but it does not hide DNS queries or destination IP addresses "
 +     "and makes TLS traffic unusual and potentially recognizable. Some "
 +     "middleboxes and TLS endpoints mishandle this behavior and may become "
-+     "inaccessible. Helium flag.",
++     "inaccessible. Argon flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(net::features::kHeliumSplitClientHello)},
      // ui
      // platform

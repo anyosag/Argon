@@ -16,9 +16,9 @@
       "fingerprinting. Helium flag.",
       kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseAudio)},
 +    {helium::kHeliumNoiseCpuCoresCommandLine,
-+     "[Helium Noise] Randomize number of CPU cores",
++     "[Argon Noise] Randomize number of CPU cores",
 +     "Randomizes the number of cores returned by "
-+     "`navigator.hardwareConcurrency` in a reasonable range. Helium flag.",
++     "`navigator.hardwareConcurrency` in a reasonable range. Argon flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseCpuCores)},
      // core/network
      // ui

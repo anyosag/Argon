@@ -51,9 +51,9 @@
       "flag.",
       kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoise)},
 +    {helium::kHeliumNoiseCanvasCommandLine,
-+     "[Helium Noise] Canvas pixel noising",
++     "[Argon Noise] Canvas pixel noising",
 +     "Adds insignificant noise to canvas pixels during readback to deceive "
-+     "canvas-based fingerprinting. Helium flag.",
++     "canvas-based fingerprinting. Argon flag.",
 +     kOsAll, FEATURE_VALUE_TYPE(blink::features::kHeliumNoiseCanvas)},
      // core/network
      // ui

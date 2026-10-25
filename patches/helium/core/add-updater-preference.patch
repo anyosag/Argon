@@ -193,7 +193,7 @@
       kOsAll, MULTI_VALUE_TYPE(helium::kChannelChoices)},
 +    {helium::kUpdateServerUrlCommandLine, "Update server URL",
 +     "Overrides the default URL for fetching updates. Should be used only for "
-+     "testing. Helium flag.",
++     "testing. Argon flag.",
 +     kOsDesktop, STRING_VALUE_TYPE(helium::kUpdateServerUrlCommandLine, "")},
      // core/network
      // ui
